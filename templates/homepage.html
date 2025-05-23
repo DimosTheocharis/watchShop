@@ -1,0 +1,12 @@
+<div>
+    <a href="/products">Προιόντα</a>
+</div>
+
+
+<h1>HOME PAGE</h1>
+
+{% for product in products %}
+    <div>
+        <img src="{{product.image}}">
+    </div>
+{% endfor %}
