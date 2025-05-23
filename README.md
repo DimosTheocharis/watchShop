@@ -1,15 +1,9 @@
 # Dependencies
 
-## Install flask
+## Instalation
 
 ```
-  pip install flask
-```
-
-## Install flask_pymongo
-
-```
-  pip install flask_pymongo
+  pip install -r deps.txt
 ```
 
 
