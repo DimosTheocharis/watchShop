@@ -29,5 +29,20 @@ def popular_products():
     return jsonify(popular)
 
 
+
+@app.route('/search/<string:name>', methods=['GET'])
+def searchWithParameter(name):
+    results = list(db.watches.find({"name": {"$regex": name, "$options": "i"}}, sort=[('price', -1)]))
+
+    return jsonify(results)
+
+
+@app.route('/search/', methods=['GET'])
+def searchWithoutParameter():
+    results = list(db.watches.find())
+
+    return jsonify(results)
+
+
 if __name__ == "__main__":
     app.run(debug=True)
