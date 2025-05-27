@@ -21,6 +21,7 @@ def products_route():
     return render_template("products.html", var=20)
 
 
+
 @app.route('/popular-products', methods=['GET'])
 def popular_products():
     # Find the top 5 most liked watches (in descending order)
@@ -43,6 +44,16 @@ def searchWithoutParameter():
 
     return jsonify(results)
 
+
+@app.route('/like/<int:id>', methods=['POST'])
+def like(id):
+    product = db.watches.find_one({"id": id})
+    
+    if (product):
+        db.watches.update_one({'id': id}, {'$set': {'likes': product['likes'] + 1}})
+        return jsonify(True)
+
+    return jsonify(False)
 
 if __name__ == "__main__":
     app.run(debug=True)
