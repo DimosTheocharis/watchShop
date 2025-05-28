@@ -29,7 +29,11 @@ def popular_products():
 
     return jsonify(popular)
 
-
+@app.route('/api/products')
+def api_products():
+    # pull everything from Mongo, omit the internal _id
+    items = list(db.watches.find({}, {'_id': False}))
+    return jsonify(items)
 
 @app.route('/search/<string:name>', methods=['GET'])
 def searchWithParameter(name):
