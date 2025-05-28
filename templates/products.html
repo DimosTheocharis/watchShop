@@ -1,3 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChronoTime | Shop</title>
+  <!-- Global styles -->
+  <link href="{{ url_for('static', filename='homepage.css') }}" rel="stylesheet"/>
+  <!-- Products-page overrides -->
+  <link href="{{ url_for('static', filename='products.css') }}" rel="stylesheet"/>
+</head>
+<body>
 
-<h1>PRODUCTS PAGE</h1>
-<p>Input = {{var}}</p>
+  <!-- Header (same as homepage) -->
+  <header>
+    <div class="container nav">
+      <a href="/" class="logo">TimeKeeper</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/products">Shop</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="menuToggle">&#9776;</div>
+    </div>
+  </header>
+
+  <main class="container" style="padding-top:6rem;">
+    <h1 class="section-title">Our Collection</h1>
+    <div id="product-grid" class="product-grid">
+      <!-- JS will inject cards here -->
+    </div>
+  </main>
+
+  <!-- Footer (same as homepage) -->
+  <footer>
+    <ul class="socials">
+      <li aria-label="Instagram"><i class="fa-brands fa-instagram"></i></li>
+      <li aria-label="Facebook"><i class="fa-brands fa-facebook"></i></li>
+      <li aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></li>
+    </ul>
+    <p>&copy; 2025 TimeKeeper. All rights reserved.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='homepage.js') }}"></script>
+</body>
+</html>
