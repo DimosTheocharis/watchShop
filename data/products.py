@@ -48,4 +48,76 @@ products = [
         "likes": 10,
         "price": 1800
     },
+    {
+        "id": 7,
+        "name": "Hugo Boss Ρολόι Μπαταρίας με Μεταλλικό Μπρασελέ",
+        "image": "https://c.scdn.gr/images/sku_main_images/030069/30069888/fixedratio_20250529105037_hugo_boss_andriko_roloi_44mm_chronografos_mpatarias_me_asimi_metalliko_mprasele_1513891.jpeg",
+        "description": "Το ρολόι Hugo Boss συνδυάζει στυλ και λειτουργικότητα, κάνοντάς το ιδανικό για κάθε άνδρα που θέλει να αποπνέει κομψότητα. Με μεταλλικό μπρασελέ, προσφέρει ανθεκτικότητα και μακροχρόνια χρήση. Το χρώμα του μπρασελέ είναι ασημί, κάνοντάς το εύκολο να συνδυαστεί με διάφορα ρούχα και στυλ, είτε πρόκειται για επίσημες εκδηλώσεις είτε για καθημερινές εμφανίσεις.",
+        "likes": 12,
+        "price": 687
+    },
+    {
+        "id": 8,
+        "name": "Burberry Ανδρικό Ρολόι 42mm Χρονογράφος Μπαταρίας με Ασημί Μεταλλικό Μπρασελέ",
+        "image": "https://b.scdn.gr/images/sku_main_images/003711/3711740/fixedratio_20250529104435_burberry_andriko_roloi_42mm_chronografos_mpatarias_me_asimi_metalliko_mprasele_bu9350.jpeg",
+        "description": "Το Burberry Ρολόι Χρονογράφος Μπαταρίας με Ασημί Μεταλλικό Μπρασελέ BU9350 συνδυάζει κομψότητα και λειτουργικότητα. Αυτό το ρολόι είναι ιδανικό για τους άνδρες που αναζητούν ένα αξιόπιστο και στυλάτο αξεσουάρ. Το Υλικό του ρολογιού είναι κατασκευασμένο από Μεταλλικό Μπρασελέ, προσφέροντας ανθεκτικότητα και άνεση κατά τη διάρκεια της ημέρας",
+        "likes": 22,
+        "price": 806
+    },
+    {
+        "id": 9,
+        "name": "Beverly Hills Polo Club Ανδρικό Ρολόι Αυτόματο με Ασημί Μεταλλικό Μπρασελέ",
+        "image": "https://c.scdn.gr/images/sku_main_images/051981/51981748/fixedratio_20250529111201_beverly_hills_polo_club_andriko_roloi_aytomato_me_asimi_metalliko_mprasele_bp3573x_350.jpeg",
+        "description": "Ανδρικό Ρολόι BEVERLY HILLS POLO CLUB Automatic από ανοξείδωτο ατσάλι με μαύρο-skeleton καντράν και μπρασελέ.",
+        "likes": 14,
+        "price": 335
+    },
+    {
+        "id": 10,
+        "name": "Certus Stainless Ανδρικό Ρολόι Αυτόματο με Μαύρο Μεταλλικό Μπρασελέ",
+        "image": "https://a.scdn.gr/images/sku_main_images/044277/44277078/fixedratio_20250529105519_certus_stainless_andriko_roloi_aytomato_me_mayro_metalliko_mprasele_616490.jpeg",
+        "description": "Ανδρικό αυτόματο ρολόι τύπου Skeleton από τον Γαλλικό Οίκο ρολογιών Certus. Χαρακτηριστικά: Κάσα από ανοξείδωτο ατσάλι σε μαύρη απόχρωση, Διάμετρος 38mm, Μαύρο καντράν με παύλες, Διάφανο καπάκι που αποκαλύπτει την λειτουργία του αυτόματου μηχανισμού, Ορυκτό κρύσταλλο ειδικής σκλήρυνσης, Μαύρο ατσάλινο μπρασελέ, Αδιάβροχο 5ΑΤΜ",
+        "likes": 0,
+        "price": 218
+    },
+    {
+        "id": 11,
+        "name": "Dior Ανδρικό Ρολόι 27mm Μπαταρίας με Ασημί Μεταλλικό Μπρασελέ",
+        "image": "https://d.scdn.gr/images/sku_main_images/004140/4140766/fixedratio_20250529104439_dior_andriko_roloi_27mm_mpatarias_me_asimi_metalliko_mprasele_d76_100.jpeg",
+        "description": "υτό το ρολόι από τη μάρκα Dior συνδυάζει στυλ και λειτουργικότητα. Το μπρασελέ του είναι κατασκευασμένο από μεταλλικό υλικό, προσφέροντας αντοχή και κομψότητα. Η λειτουργία του είναι αναλογική, κάτι που διευκολύνει την ανάγνωση της ώρας με κλασικό τρόπο. Ο χρώμα λουριού είναι σε όμορφο ασημί, ιδανικό για κάθε περίσταση. Ο μηχανισμός λειτουργεί με μπαταρία,...",
+        "likes": 14,
+        "price": 483
+    },
+    {
+        "id": 12,
+        "name": "Dolce & Gabbana Ανδρικό Ρολόι 40mm Μπαταρίας με Μαύρο Μεταλλικό Μπρασελέ",
+        "image": "https://c.scdn.gr/images/sku_main_images/000367/367472/fixedratio_20250529104421_dolce_gabbana_dw0663_andriko_roloi_40mm_mpatarias_me_mayro_metalliko_mprasele_dw0663.jpeg",
+        "description": "D&G Ανδρικό Ρολόι Μέ Μαύρο Καντράν Καί Ασημί Δείκτες DW 0663. Μπρασελέ με μαύρο καντράν και ασημί δείκτες, Μηχανισμός: Quartz, Κωδικός: DW 0663",
+        "likes": 0,
+        "price": 350
+    },
+    {
+        "id": 13,
+        "name": "Ellesse Ανδρικό Ρολόι 45mm Χρονογράφος Μπαταρίας με Ασημί Μεταλλικό Μπρασελέ",
+        "image": "https://b.scdn.gr/images/sku_main_images/002858/2858694/fixedratio_20250529104432_ellesse_andriko_roloi_45mm_chronografos_mpatarias_me_asimi_metalliko_mprasele_03_0298_011.jpeg",
+        "description": "Αυτό το ρολόι προσφέρει μια κομψή και λειτουργική επιλογή για κάθε άνδρα που εκτιμά την ποιότητα και το στυλ. Είναι εξοπλισμένο με μεταλλικό μπρασελέ σε ασημί απόχρωση, που προσθέτει μια αίσθηση πολυτέλειας. Η λειτουργία είναι αναλογική, παρέχοντας ευκολία στην ανάγνωση της ώρας, ενώ ο μηχανισμός μπαταρίας εξασφαλίζει ακριβή και αξιόπιστη λειτουργία.",
+        "likes": 0,
+        "price": 340
+    },
+    {
+        "id": 14,
+        "name": "Guess Ανδρικό Ρολόι Μπαταρίας με Χρυσό Μεταλλικό Μπρασελέ",
+        "image": "https://b.scdn.gr/images/sku_main_images/059882/59882484/fixedratio_20250529110618_guess_andriko_roloi_mpatarias_me_chryso_metalliko_mprasele_gw0497g4.jpeg",
+        "description": "Το ρολόι GUESS Mod. GW0497G4 είναι η τέλεια επιλογή για όσους αναζητούν κομψά και στιλάτα αξεσουάρ. Αυτό το μοντέλο συνδυάζει μοντέρνο σχεδιασμό με υψηλή ποιότητα κατασκευής, καθιστώντας το ιδανικό συμπλήρωμα για κάθε στυλ",
+        "likes": 10,
+        "price": 449
+    },
+    {
+        "id": 15,
+        "name": "Gant Ανδρικό Ρολόι 41mm Χρονογράφος Μπαταρίας με Χρυσό Μεταλλικό Μπρασελέ",
+        "image": "https://d.scdn.gr/images/sku_main_images/054713/54713588/fixedratio_20250529111650_gant_andriko_roloi_41mm_chronografos_mpatarias_me_chryso_metalliko_mprasele_g189007.jpeg",
+        "description": "Ανδρικό ρολόι GANT από ανοξείδωτο ατσάλι. Χαρακτηριστικά: Μαύρο καντράν, Χρυσό μπρασελέ",
+        "likes": 18,
+        "price": 251
+    },
 ]

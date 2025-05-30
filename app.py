@@ -18,11 +18,12 @@ def homepage_route():
 
 @app.route('/products')
 def products_route():
-    return render_template("products.html", var=20)
+    return render_template("products.html")
 
 
+########################################  API  ########################################
 
-@app.route('/popular-products', methods=['GET'])
+@app.route('/api/popular-products', methods=['GET'])
 def popular_products():
     # Find the top 5 most liked watches (in descending order)
     popular = list(db.watches.find(sort=[('likes', -1)], limit=5))
@@ -35,21 +36,21 @@ def api_products():
     items = list(db.watches.find({}, {'_id': False}))
     return jsonify(items)
 
-@app.route('/search/<string:name>', methods=['GET'])
+@app.route('/api/search/<string:name>', methods=['GET'])
 def searchWithParameter(name):
     results = list(db.watches.find({"name": {"$regex": name, "$options": "i"}}, sort=[('price', -1)]))
 
     return jsonify(results)
 
 
-@app.route('/search/', methods=['GET'])
+@app.route('/api/search/', methods=['GET'])
 def searchWithoutParameter():
     results = list(db.watches.find())
 
     return jsonify(results)
 
 
-@app.route('/like/<int:id>', methods=['POST'])
+@app.route('/api/like/<int:id>', methods=['POST'])
 def like(id):
     product = db.watches.find_one({"id": id})
     

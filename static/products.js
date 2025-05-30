@@ -27,7 +27,6 @@ fetch('/api/products')
  * Finds those products whose names match the text inserted in the search bar
  */
 function handleSearch() {
-    console.log("eo");
     const searchBar = document.getElementById('searchBar');
     const query = searchBar['value'];
 
