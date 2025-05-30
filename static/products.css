@@ -10,6 +10,7 @@
 
 /* ── Individual Card ─────────────────────────────────────────────────────── */
 .product-card {
+  max-width: 350px;
   display: flex;
   flex-direction: column;
   border: 1px solid #eee;
@@ -75,4 +76,22 @@
 }
 .like-btn:hover {
   background: #444;
+}
+
+
+/* ── Search bar ────────────────────────────────────────────────────────── */
+form.search-form {
+  input {
+    padding: 0.5rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-color: black;
+  }
+
+  button {
+    padding: 0.5rem;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+  }
 }
