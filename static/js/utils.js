@@ -30,7 +30,6 @@ export function renderProducts(products) {
 function renderProduct(product) {
     const card = document.createElement('article');
     card.className = 'product-card';
-    console.log(product.image);
     card.innerHTML = `
       <img src="static/images/${product.image}" alt="${product.name}">
       <div class="product-info">

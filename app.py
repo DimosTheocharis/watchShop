@@ -1,19 +1,23 @@
+import os
 from flask import Flask, render_template, jsonify
 from flask_pymongo import PyMongo
+from flask_cors import CORS
 from data.products import products
-from static.database_initialization import initialize
+from database_initialization import initialize
+from dotenv import load_dotenv
+
+
+# Load environmental variables
+load_dotenv()
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = "mongodb://localhost:27017"
+app.config["MONGO_URI"] = os.getenv("MONGO_URI")
 mongo = PyMongo(app)
 
 db = initialize(mongo)
-print('------------------------------------------------')
-print(db)
 
 @app.route('/')
 def homepage_route():
-    print(products)
     return render_template("homepage.html", products=products)
 
 @app.route('/products')
@@ -61,4 +65,4 @@ def like(id):
     return jsonify(False)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=5000)
