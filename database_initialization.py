@@ -12,6 +12,9 @@ def initialize(mongo: PyMongo):
     database_name = "watchesDatabase"
     collection_name = "watches"
 
+    print("Databases = ")
+    print(databases)
+
     # Check if database already exists 
     if (database_name in databases):
         return mongo.cx[database_name]
