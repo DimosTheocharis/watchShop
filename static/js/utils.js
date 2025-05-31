@@ -28,30 +28,35 @@ export function renderProducts(products) {
  * @returns the article DOM element
  */
 function renderProduct(product) {
+    const imgSrc = product.image.startsWith('http')
+      ? product.image
+      : `/static/images/${product.image}`;
+  
     const card = document.createElement('article');
     card.className = 'product-card';
     card.innerHTML = `
-      <img src="static/images/${product.image}" alt="${product.name}">
+      <img src="${imgSrc}" alt="${product.name}">
       <div class="product-info">
         <h2>${product.name}</h2>
         <p class="description">${product.description}</p>
-        <p class="price">€${product.price.toFixed(2)}</p>
+        <p class="price">€${Number(product.price).toFixed(2)}</p>
         <p class="likes"><i class="fa fa-heart"></i> <span>${product.likes}</span></p>
         <button class="btn like-btn" data-id="${product.id}">Like</button>
       </div>
     `;
-
-    const likeButton = card.querySelector("button.like-btn");
-    const likesSpan = card.querySelector("p.likes span");
-    likeButton.addEventListener("click", () => {
-        fetch(`/api/like/${product.id}`, { method: 'POST' })
-        .then(response => response.json())
+  
+    // Like-button handler
+    const likeButton = card.querySelector('.like-btn');
+    const likesSpan  = card.querySelector('.likes span');
+  
+    likeButton.addEventListener('click', () => {
+      fetch(`/api/like/${product.id}`, { method: 'POST' })
+        .then(res => res.json())
         .then(ok => {
-            if (ok) {
-                likesSpan.textContent = parseInt(likesSpan.textContent) + 1;
-            }
-        });
-    })
-
+          if (ok) likesSpan.textContent = Number(likesSpan.textContent) + 1;
+        })
+        .catch(console.error);
+    });
+  
     return card;
-}
+  }

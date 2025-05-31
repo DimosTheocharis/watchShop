@@ -20,6 +20,38 @@
     max-width: 100%;
     display: block;
   }
+
+  /* Footer */
+  footer {
+    background: #111;
+    color: #ddd;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  .socials {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #444;
+    border-radius: 50%;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  .socials a:hover {
+    background: #fff;
+    color: #111;
+  }
+  footer p {
+    font-size: 0.9rem;
+  }
   
   /* ── Utilities ───────────────────────────────────────────────────────────── */
   .container {
