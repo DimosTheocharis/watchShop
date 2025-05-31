@@ -1,28 +1,33 @@
+import os
 from flask import Flask, render_template, jsonify
 from flask_pymongo import PyMongo
+from flask_cors import CORS
 from data.products import products
-from static.database_initialization import initialize
+from database_initialization import initialize
+from dotenv import load_dotenv
+
+
+# Load environmental variables
+load_dotenv()
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = "mongodb://localhost:27017"
+app.config["MONGO_URI"] = os.getenv("MONGO_URI")
 mongo = PyMongo(app)
 
 db = initialize(mongo)
-print('------------------------------------------------')
-print(db)
 
 @app.route('/')
 def homepage_route():
-    print(products)
     return render_template("homepage.html", products=products)
 
 @app.route('/products')
 def products_route():
-    return render_template("products.html", var=20)
+    return render_template("products.html")
 
 
+########################################  API  ########################################
 
-@app.route('/popular-products', methods=['GET'])
+@app.route('/api/popular-products', methods=['GET'])
 def popular_products():
     # Find the top 5 most liked watches (in descending order)
     popular = list(db.watches.find(sort=[('likes', -1)], limit=5))
@@ -35,21 +40,21 @@ def api_products():
     items = list(db.watches.find({}, {'_id': False}))
     return jsonify(items)
 
-@app.route('/search/<string:name>', methods=['GET'])
+@app.route('/api/search/<string:name>', methods=['GET'])
 def searchWithParameter(name):
     results = list(db.watches.find({"name": {"$regex": name, "$options": "i"}}, sort=[('price', -1)]))
 
     return jsonify(results)
 
 
-@app.route('/search/', methods=['GET'])
+@app.route('/api/search/', methods=['GET'])
 def searchWithoutParameter():
     results = list(db.watches.find())
 
     return jsonify(results)
 
 
-@app.route('/like/<int:id>', methods=['POST'])
+@app.route('/api/like/<int:id>', methods=['POST'])
 def like(id):
     product = db.watches.find_one({"id": id})
     
@@ -60,4 +65,4 @@ def like(id):
     return jsonify(False)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0", port=5000)
