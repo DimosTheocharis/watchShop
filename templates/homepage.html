@@ -23,9 +23,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
     <ul class="nav-links" id="navLinks">
-      <li><a href="/">Home</a></li>
-      <li><a href="/products">Shop</a></li>
+      <li><a href="/" translate="Home"></a></li>
+      <li><a href="/products" translate="Products"></a></li>
     </ul>
+
+    <div>
+      <select id="languages">
+        <option value="el" translate="Greek"></option>
+        <option value="en" translate="English" selected></option>
+      </select>
+    </div>
 
     <div class="menu-toggle" id="menuToggle">&#9776;</div>
   </div>
@@ -35,9 +42,9 @@
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="container hero-content">
-      <h1>Elevate Your Time</h1>
-      <p>Discover meticulously crafted timepieces that blend precision, heritage, and contemporary style.</p>
-      <a href="products.html" class="btn">Explore Collection</a>
+      <h1 translate="HeroTitle"></h1>
+      <p translate="HeroText"></p>
+      <a translate="HeroButton" href="products.html" class="btn"></a>
     </div>
   </section>
 
@@ -119,6 +126,7 @@
     </ul>
   </footer>
 
-  <script src="{{ url_for('static', filename='js/homepage.js') }}"></script>
+  <script type="module" src="{{ url_for('static', filename='js/homepage.js') }}"></script>
+  <script type="module" src="{{ url_for('static', filename='js/translate.js') }}"></script>
 </body>
 </html>
