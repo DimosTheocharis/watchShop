@@ -25,6 +25,7 @@
         id="searchBar"
         placeholder="Search…"
         aria-label="Search"
+        translate="Search"
       />
       <button type="button" aria-label="Submit search" id="searchButton">
         <i class="fa-solid fa-magnifying-glass"></i>
@@ -32,16 +33,23 @@
     </form>
 
     <ul class="nav-links" id="navLinks">
-      <li><a href="/">Home</a></li>
-      <li><a href="/products">Shop</a></li>
+      <li><a href="/" translate="Home"></a></li>
+      <li><a href="/products" translate="Products"></a></li>
     </ul>
+
+    <div>
+      <select class="languages" id="productsLanguages">
+        <option value="el" translate="Greek"></option>
+        <option value="en" translate="English" selected></option>
+      </select>
+    </div>
 
     <div class="menu-toggle" id="menuToggle">&#9776;</div>
   </div>
 </header>
 
   <main class="container" style="padding-top:6rem;">
-    <h1 class="section-title">Our Collection</h1>
+    <h1 class="section-title" translate="OurCollection"></h1>
     <div id="product-grid" class="product-grid">
       <!-- JS will inject cards here -->
     </div>
@@ -58,5 +66,6 @@
   </footer>
 
   <script type="module" src="{{ url_for('static', filename='js/products.js') }}"></script>
+  <script type="module" src="{{ url_for('static', filename='js/translate.js') }}"></script>
 </body>
 </html>

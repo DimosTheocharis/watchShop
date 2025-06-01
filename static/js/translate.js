@@ -7,11 +7,15 @@ const languages = {
 }
 
 function setUpPage() {
-    const languagesSelector = document.getElementById("languages");
+    const languagesSelector =  document.getElementsByClassName("languages")[0];
     languagesSelector.addEventListener("change", (event) => {
         changeLanguage(event.target.value);
+        localStorage.setItem("language", event.target.value);
     })
-    changeLanguage("en");
+    let currentLanguage = localStorage.getItem("language");
+    currentLanguage = currentLanguage ? currentLanguage : "en";
+    changeLanguage(currentLanguage);
+    languagesSelector.value = currentLanguage;
 }
 
 function changeLanguage(currentLanguage) {
@@ -20,7 +24,15 @@ function changeLanguage(currentLanguage) {
 
     elements.forEach((element) => {
         const label = element.getAttribute("translate");
-        element.innerText = languages[currentLanguage][label];
+        // Make sure that nested labels (such as WhyChooseUs.Header) will get translated correctly, by digging deeper 
+        // into the languages[curerntLanguage] object
+        const translation = label.split(".").reduce((obj, prop) => obj[prop], languages[currentLanguage]);
+        
+        if (element.tagName === "INPUT") {
+            element.placeholder = translation;
+        } else {
+            element.innerText = translation; 
+        }
     })
 }
 

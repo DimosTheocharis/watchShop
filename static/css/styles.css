@@ -188,7 +188,7 @@
 
 
 
-  #languages {
+  .languages {
     padding: 8px;
     border: none;
     background-color: inherit;
@@ -201,7 +201,7 @@
     }
   }
 
-  #languages:active, #languages:focus {
+  .languages:active, .languages:focus {
     border: none;
     outline: none;
   }
