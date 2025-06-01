@@ -135,10 +135,13 @@
   /* ── Popular carousel ─────────────────────────────── */
 .popular {
   padding: 4rem 0;
+  display: flex;
+  justify-content: center;
 }
 
 .popular-carousel {
   position: relative;
+  height: 60vh;
   aspect-ratio: 9 / 9;      /* keeps slides responsive */
   overflow: hidden;
   border-radius: 1rem;
