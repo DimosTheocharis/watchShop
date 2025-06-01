@@ -139,7 +139,7 @@
 
 .popular-carousel {
   position: relative;
-  aspect-ratio: 16 / 9;      /* keeps slides responsive */
+  aspect-ratio: 9 / 9;      /* keeps slides responsive */
   overflow: hidden;
   border-radius: 1rem;
 }

@@ -33,5 +33,5 @@ setUpCarousel();
      slides[index].style.opacity = '0';
      index = (index + 1) % slides.length;
      slides[index].style.opacity = '1';
-   }, 1000);
+   }, 2000);
  }
