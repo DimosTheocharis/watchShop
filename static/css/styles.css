@@ -185,6 +185,26 @@
   .menu-toggle {
     z-index: 1;
   }
+
+
+
+  .languages {
+    padding: 8px;
+    border: none;
+    background-color: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+
+    option {
+      padding: 8px;
+      cursor: pointer;
+    }
+  }
+
+  .languages:active, .languages:focus {
+    border: none;
+    outline: none;
+  }
   
   /* ── Responsive ──────────────────────────────────────────────────────────── */
   @media (max-width: 768px) {

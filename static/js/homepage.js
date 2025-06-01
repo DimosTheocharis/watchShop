@@ -17,7 +17,7 @@ setUpCarousel();
      slide.className = 'slide';
      slide.style.opacity = i === 0 ? '1' : '0';
      slide.innerHTML = `
-       <img src="${p.image}" alt="${p.name}">
+       <img src="static/images/${p.image}" alt="${p.name}">
        <div class="slide-caption">
          <h3>${p.name}</h3>
          <p class="price">€${Number(p.price).toLocaleString('el-GR')}</p>
