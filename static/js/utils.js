@@ -28,14 +28,10 @@ export function renderProducts(products) {
  * @returns the article DOM element
  */
 function renderProduct(product) {
-    const imgSrc = product.image.startsWith('http')
-      ? product.image
-      : `/static/images/${product.image}`;
-  
     const card = document.createElement('article');
     card.className = 'product-card';
     card.innerHTML = `
-      <img src="${imgSrc}" alt="${product.name}">
+      <img src="static/images/${product.image}" alt="${product.name}">
       <div class="product-info">
         <h2>${product.name}</h2>
         <p class="description">${product.description}</p>
