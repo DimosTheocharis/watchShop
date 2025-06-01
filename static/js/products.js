@@ -5,10 +5,17 @@ import { renderProducts } from './utils.js';
 function setupPage() {
     document.addEventListener("DOMContentLoaded", () => {
         const searchButton = document.getElementById("searchButton");
+        const searchForm = document.getElementById("searchForm");
+        
         searchButton.addEventListener("click", () => {
             handleSearch();
         })
 
+        searchForm.addEventListener("submit", (event) => {
+            console.log("ELA RE");
+            event.preventDefault();
+            handleSearch();
+        })
     })
 }
 
